@@ -1,14 +1,11 @@
-* Nixified STM32-base F4 Template for ATS
-This repo is not meant to be a project in of itself. Instead it is a template for 
-setting up all the STM tooling with the arm abi as well.
+* Nixified STM32-base F4 Project for the olimex STM32-E407 board
+The [[https://www.olimex.com/Products/ARM/ST/STM32-E407/resources/STM32-E407.pdf][OlimexSTM32-E407]] is a very nice board for development. As it has a 
+working phy and ethernet setup. The breakouts are very nice as well and 
+it will plug right in and work with the standard st-link/v2 controller. 
 
-It is a combination of the stm32 base system and the ATSLANG Project for Arduino.
-Using nix to try and make it all a bit more maintainable.
+
 ** Building your code 
-The main project I built all this for was the Nucleo-64 STM32F401. 
-But I think it will work for any Nucleo-64 family project.
-
-I have tested it with the Olimex STM 32-E407 board as well.
+The chip is the STM32F401
 
 + =make=  Builds Code
 + =make flash=  Downloads to connected and configured STLINK V2 device
