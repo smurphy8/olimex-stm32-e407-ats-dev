@@ -1,0 +1,77 @@
+* Nixified STM32-base F4 Template for ATS
+This repo is not meant to be a project in of itself. Instead it is a template for 
+setting up all the STM tooling with the arm abi as well.
+
+It is a combination of the stm32 base system and the ATSLANG Project for Arduino.
+Using nix to try and make it all a bit more maintainable.
+** Building your code 
+The main project I built all this for was the Nucleo-64 STM32F401. 
+But I think it will work for any Nucleo-64 family project.
+
+I have tested it with the Olimex STM 32-E407 board as well.
+
++ =make=  Builds Code
++ =make flash=  Downloads to connected and configured STLINK V2 device
++ =make clean=  Cleans Code
+
+
+
+** Downloading your code to st
+*** Connections   
+This example assumes you are using an stlink compatable programmer.
+[[https://stm32-base.org/guides/connecting-your-debugger][This guide shows how to properly connect the debugger]]
+My Connection:
+[[./img/ST-LINK_V2_Official_Header.png]]
+
+when you have everything connected right you should be able to 
+=ls /dev= 
+and see =stlinkv2_5= or something similar.
+
+
+*** nix-shell
+Going into the nix shell using =nix-shell= properly 
+sets up the make file configuration including downloading the F4 
+project enviornment and making the linked variables. 
+It also brings the st-link utilities into scope.
+
+From here, you can you can run:
+#+begin_example using st link
+[nix-shell:~/hardware/lumberjack-io/stm32-first-proj]$ st-util -p 4500
+st-util 1.5.1
+2021-07-29T18:44:51 INFO usb.c: -- exit_dfu_mode
+2021-07-29T18:44:51 INFO common.c: Loading device parameters....
+2021-07-29T18:44:51 INFO common.c: Device connected is: F4 device, id 0x10076413
+2021-07-29T18:44:51 INFO common.c: SRAM size: 0x30000 bytes (192 KiB), Flash: 0x401c00 bytes (4103 KiB) in pages of 16384 bytes
+
+#+end_example
+
+This sets up a gdb enviornment so that once you =make= your files you can load the elf.
+[[https://www.mankier.com/1/st-util][useful st-util tutorial]]
+#+begin_example
+(gdb) target extended-remote localhost:4500
+Remote debugging using localhost:4500
+
+(gdb) load firmware.elf
+#+end_example
+
+replace =firmware.elf=  with your file
+
+
+
+** STM32-base F4 template
+
+This is a project template for using the STM32-base project with a STM32F4 series device. See the [STM32-base project](https://github.com/STM32-base/STM32-base) for more information on how to get started with this template.
+
+**Note:** If you want to report an issue for this template, please report it on the [STM32-base project](https://github.com/STM32-base/STM32-base).
+
+
+or to just flash it onto the device you can run 
+=make flash=
+
+
+* Last working st-link
+I use the stlink v 7 in the shell but I still do an install of stlink native to Ubuntu.
+This fixes some of the /dev things that you need to work properly to flash items.
+* Documentation and links
+
++ [[https://www.nimblemachines.com/stm32-gpio/][GPIO Registers]]

@@ -1,0 +1,1 @@
+fun loopProgr():void = "ext#loopProgr_in_c"

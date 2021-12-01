@@ -1,0 +1,62 @@
+{
+    "STM32-base": {
+        "branch": "master",
+        "description": "A simple start for any STM32 based project.",
+        "homepage": "https://stm32-base.org",
+        "owner": "smurphy8",
+        "repo": "STM32-base",
+        "rev": "d260b616689692bac0411812b37be065b34f3354",
+        "sha256": "001vy89n5aib2h28wy8nah77mpkqqdvi99ai084vza7xd7izsicd",
+        "type": "tarball",
+        "url": "https://github.com/smurphy8/STM32-base/archive/d260b616689692bac0411812b37be065b34f3354.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "STM32-base-STM32Cube": {
+        "branch": "master",
+        "description": "All CMSIS and HAL code for the STM32 microcontrollers bundled together in one repository.",
+        "homepage": "",
+        "owner": "smurphy8",
+        "repo": "STM32-base-STM32Cube",
+        "rev": "71bcfb75e9b3aadbfcb05b57148d995a7f340b4f",
+        "sha256": "0pj88iyfg294lafsjysn2y2vdnjgnj5bifzdgpxsaqz2q3w421nm",
+        "type": "tarball",
+        "url": "https://github.com/smurphy8/STM32-base-STM32Cube/archive/71bcfb75e9b3aadbfcb05b57148d995a7f340b4f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "e0ca65c81a2d7a4d82a189f1e23a48d59ad42070",
+        "sha256": "1pq9nh1d8nn3xvbdny8fafzw87mj7gsmp6pxkdl65w2g18rmcmzx",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/e0ca65c81a2d7a4d82a189f1e23a48d59ad42070.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-21.05",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2262d7863a6af007274a698367484bf4903a3299",
+        "sha256": "11k0czkz5hnss6s4ly4dgqrd3l6ziwic1sh6dnk53gys4b20nkgq",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/2262d7863a6af007274a698367484bf4903a3299.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "stlink": {
+        "branch": "develop",
+        "description": "Open source STM32 MCU programming toolset",
+        "homepage": "",
+        "owner": "smurphy8",
+        "repo": "stlink",
+        "rev": "26a63c11a4125b7c5b3a2677f342cf13c37f1244",
+        "sha256": "0g189qfzq3qmnr59z5qalvq68nq1zgrb3ffw8907dpi960kdp8in",
+        "type": "tarball",
+        "url": "https://github.com/smurphy8/stlink/archive/26a63c11a4125b7c5b3a2677f342cf13c37f1244.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
